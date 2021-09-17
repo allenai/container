@@ -55,13 +55,13 @@ The directory structure is the standard layout for the torchvision [`datasets.Im
 To evaluate a pre-trained Container-Light on ImageNet val with a single GPU run:
 
 
-For Deit-small, run:
+For Container-Light, run:
 ```
 python main.py --eval --resume checkpoint.pth --model container_v1_light --data-path /path/to/imagenet
 ```
 giving
 ```
-* Acc@1 79.854 Acc@5 94.968 loss 0.881
+* Acc@1 82.24
 ```
 
 
