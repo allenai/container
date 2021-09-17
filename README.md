@@ -55,7 +55,7 @@ The directory structure is the standard layout for the torchvision [`datasets.Im
 ## Evaluation
 To evaluate a pre-trained DeiT-base on ImageNet val with a single GPU run:
 ```
-python main.py --eval --resume https://dl.fbaipublicfiles.com/deit/deit_base_patch16_224-b5f2ef4d.pth --data-path /path/to/imagenet
+python main.py --eval --resume checkpoint.pth --data-path /path/to/imagenet
 ```
 This should give
 ```
@@ -64,106 +64,13 @@ This should give
 
 For Deit-small, run:
 ```
-python main.py --eval --resume https://dl.fbaipublicfiles.com/deit/deit_small_patch16_224-cd65a155.pth --model deit_small_patch16_224 --data-path /path/to/imagenet
+python main.py --eval --resume checkpoint.pth --model container_v1_light --data-path /path/to/imagenet
 ```
 giving
 ```
-* Acc@1 79.854 Acc@5 94.968 loss 0.881
+* Acc@1 82.3 Acc@5 96.2
 ```
 
-Note that Deit-small is *not* the same model as in Timm. 
-
-And for Deit-tiny:
-```
-python main.py --eval --resume https://dl.fbaipublicfiles.com/deit/deit_tiny_patch16_224-a1311bcf.pth --model deit_tiny_patch16_224 --data-path /path/to/imagenet
-```
-which should give
-```
-* Acc@1 72.202 Acc@5 91.124 loss 1.219
-```
-
-Here you'll find the command-lines to reproduce the inference results for the distilled and finetuned models
-
-<details>
-
-<summary>
-deit_base_distilled_patch16_224
-</summary>
-
-```
-python main.py --eval --model deit_base_distilled_patch16_224 --resume https://dl.fbaipublicfiles.com/deit/deit_base_distilled_patch16_224-df68dfff.pth
-```
-giving
-```
-* Acc@1 83.372 Acc@5 96.482 loss 0.685
-```
-
-</details>
-
-
-<details>
-
-<summary>
-deit_small_distilled_patch16_224
-</summary>
-
-```
-python main.py --eval --model deit_small_distilled_patch16_224 --resume https://dl.fbaipublicfiles.com/deit/deit_small_distilled_patch16_224-649709d9.pth
-```
-giving
-```
-* Acc@1 81.164 Acc@5 95.376 loss 0.752
-```
-
-</details>
-
-<details>
-
-<summary>
-deit_tiny_distilled_patch16_224
-</summary>
-
-```
-python main.py --eval --model deit_tiny_distilled_patch16_224 --resume https://dl.fbaipublicfiles.com/deit/deit_tiny_distilled_patch16_224-b40b3cf7.pth
-```
-giving
-```
-* Acc@1 74.476 Acc@5 91.920 loss 1.021
-```
-
-</details>
-
-<details>
-
-<summary>
-deit_base_patch16_384
-</summary>
-
-```
-python main.py --eval --model deit_base_patch16_384 --input-size 384 --resume https://dl.fbaipublicfiles.com/deit/deit_base_patch16_384-8de9b5d1.pth
-```
-giving
-```
-* Acc@1 82.890 Acc@5 96.222 loss 0.764
-```
-
-</details>
-
-<details>
-
-<summary>
-deit_base_distilled_patch16_384
-</summary>
-
-```
-python main.py --eval --model deit_base_distilled_patch16_384 --input-size 384 --resume https://dl.fbaipublicfiles.com/deit/deit_base_distilled_patch16_384-d0272ac0.pth
-```
-giving
-```
-* Acc@1 85.224 Acc@5 97.186 loss 0.636
-```
-
-</details>
 
 ## Training
 To train DeiT-small and Deit-tiny on ImageNet on a single node with 4 gpus for 300 epochs run:
