@@ -61,7 +61,7 @@ python main.py --eval --resume checkpoint.pth --model container_v1_light --data-
 ```
 giving
 ```
-* Acc@1 82.24
+* Acc@1 82.26
 ```
 
 
