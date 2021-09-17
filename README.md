@@ -3,26 +3,21 @@
 If you use this code for a paper please cite:
 
 ```
-@InProceedings{pmlr-v139-touvron21a,
-  title =     {Training data-efficient image transformers &amp; distillation through attention},
-  author =    {Touvron, Hugo and Cord, Matthieu and Douze, Matthijs and Massa, Francisco and Sablayrolles, Alexandre and Jegou, Herve},
-  booktitle = {International Conference on Machine Learning},
-  pages =     {10347--10357},
-  year =      {2021},
-  volume =    {139},
-  month =     {July}
+@article{gao2021container,
+  title={Container: Context Aggregation Network},
+  author={Gao, Peng and Lu, Jiasen and Li, Hongsheng and Mottaghi, Roozbeh and Kembhavi, Aniruddha},
+  journal={arXiv preprint arXiv:2106.01401},
+  year={2021}
 }
 ```
 
 # Model Zoo
 
-We provide baseline Container models pretrained on ImageNet 2012.
+We provide baseline Container-light models pretrained on ImageNet 2012.
 
 | name | acc@1 | acc@5 | #params | url |
 | --- | --- | --- | --- | --- |
-| Container-Light | 72.2 | 91.1 | 5M | [model](https://dl.fbaipublicfiles.com/deit/deit_tiny_patch16_224-a1311bcf.pth) |
-
-
+| Container-Light | 82.3 | 96.2 | 21M | [model](https://drive.google.com/file/d/1WMOWoxTX7AQDCbfMYh7naqIHube3K85A/view?usp=sharing) |
 
 # Usage
 
