@@ -73,7 +73,7 @@ Container-Light
 ```
 python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --model container_v1_light --batch-size 128 --data-path /path/to/imagenet --output_dir /path/to/save
 ```
-## Downstream task on SMCA-DETR, Retinanet and Mask RCC
+## Downstream task on SMCA-DETR, Retinanet and Mask RCNN
 Code will be released seperately. 
 
 # License
