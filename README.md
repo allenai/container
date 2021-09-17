@@ -57,7 +57,7 @@ To evaluate a pre-trained Container-Light on ImageNet val with a single GPU run:
 
 For Deit-small, run:
 ```
-python main.py --eval --resume https://dl.fbaipublicfiles.com/deit/deit_small_patch16_224-cd65a155.pth --model deit_small_patch16_224 --data-path /path/to/imagenet
+python main.py --eval --resume checkpoint.pth --model container_v1_light --data-path /path/to/imagenet
 ```
 giving
 ```
@@ -71,7 +71,7 @@ To train Container-Light on ImageNet on a single node with 8 gpus for 300 epochs
 
 Container-Light
 ```
-python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --model deit_small_patch16_224 --batch-size 128 --data-path /path/to/imagenet --output_dir /path/to/save
+python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --model container_v1_light --batch-size 128 --data-path /path/to/imagenet --output_dir /path/to/save
 ```
 
 
