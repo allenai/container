@@ -1,5 +1,3 @@
-# Copyright (c) 2015-present, Facebook, Inc.
-# All rights reserved.
 import torch
 import torch.nn as nn
 from functools import partial
@@ -17,6 +15,7 @@ __all__ = [
 ]
 
 class Mlp(nn.Module):
+    # taken from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
     def __init__(self, in_features, hidden_features=None, out_features=None, act_layer=nn.GELU, drop=0.):
         super().__init__()
         out_features = out_features or in_features
@@ -35,6 +34,7 @@ class Mlp(nn.Module):
         return x
 
 class CMlp(nn.Module):
+    # taken from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
     def __init__(self, in_features, hidden_features=None, out_features=None, act_layer=nn.GELU, drop=0.):
         super().__init__()
         out_features = out_features or in_features
@@ -55,6 +55,7 @@ class CMlp(nn.Module):
     
     
 class Attention(nn.Module):
+    # taken from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
     def __init__(self, dim, num_heads=8, qkv_bias=False, qk_scale=None, attn_drop=0., proj_drop=0.):
         super().__init__()
         self.num_heads = num_heads
@@ -83,6 +84,7 @@ class Attention(nn.Module):
         return x
     
 class Attention_pure(nn.Module):
+    # taken from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
     def __init__(self, dim, num_heads=8, qkv_bias=False, qk_scale=None, attn_drop=0., proj_drop=0.):
         super().__init__()
         self.num_heads = num_heads
@@ -108,7 +110,7 @@ class Attention_pure(nn.Module):
     
 
 class MixBlock(nn.Module):
-
+    # taken from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
     def __init__(self, dim, num_heads, mlp_ratio=4., qkv_bias=False, qk_scale=None, drop=0., attn_drop=0.,
                  drop_path=0., act_layer=nn.GELU, norm_layer=nn.LayerNorm):
         super().__init__()
@@ -150,7 +152,7 @@ class MixBlock(nn.Module):
     
 
 class CBlock(nn.Module):
-
+    # taken from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
     def __init__(self, dim, num_heads, mlp_ratio=4., qkv_bias=False, qk_scale=None, drop=0., attn_drop=0.,
                  drop_path=0., act_layer=nn.GELU, norm_layer=nn.LayerNorm):
         super().__init__()
@@ -172,7 +174,7 @@ class CBlock(nn.Module):
         return x
     
 class Block(nn.Module):
-
+    # taken from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
     def __init__(self, dim, num_heads, mlp_ratio=4., qkv_bias=False, qk_scale=None, drop=0., attn_drop=0.,
                  drop_path=0., act_layer=nn.GELU, norm_layer=nn.LayerNorm):
         super().__init__()
@@ -195,6 +197,7 @@ class Block(nn.Module):
 
     
 class PatchEmbed(nn.Module):
+    # taken from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
     """ Image to Patch Embedding
     """
     def __init__(self, img_size=224, patch_size=16, in_chans=3, embed_dim=768):
@@ -221,6 +224,7 @@ class PatchEmbed(nn.Module):
         return x
     
 class HybridEmbed(nn.Module):
+    # taken from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
     def __init__(self, backbone, img_size=224, feature_size=None, in_chans=3, embed_dim=768):
         super().__init__()
         assert isinstance(backbone, nn.Module)
@@ -259,6 +263,7 @@ class HybridEmbed(nn.Module):
 
         
 class VisionTransformer(nn.Module):
+    # taken from https://github.com/rwightman/pytorch-image-models/blob/master/timm/models/vision_transformer.py
     """ Vision Transformer
     A PyTorch impl of : `An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale`  -
         https://arxiv.org/abs/2010.11929
