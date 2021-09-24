@@ -72,8 +72,6 @@ giving
 * Acc@1 82.26
 ```
 
-## News
-Container V2 with much better performance will be released soon. Stay tuned. 
 
 ## Training
 To train Container-Light on ImageNet on a single node with 8 gpus for 300 epochs run:
@@ -84,6 +82,9 @@ python -m torch.distributed.launch --nproc_per_node=8 --use_env main.py --model 
 ```
 ## Downstream task on SMCA-DETR, Retinanet and Mask RCNN
 Code will be released seperately. 
+
+# News
+Container V2 with much better performance will be released soon. Stay tuned. 
 
 # License
 This repository is released under the Apache 2.0 license as found in the [LICENSE](LICENSE) file.
