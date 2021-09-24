@@ -40,7 +40,7 @@ conda install -c pytorch pytorch torchvision
 pip install timm==0.3.2
 ```
 
-## Data preparation
+# Data preparation
 
 Download and extract ImageNet train and val images from http://image-net.org/.
 The directory structure is the standard layout for the torchvision [`datasets.ImageFolder`](https://pytorch.org/docs/stable/torchvision/datasets.html#imagefolder), and the training and validation data is expected to be in the `train/` folder and `val` folder respectively:
@@ -72,7 +72,7 @@ giving
 * Acc@1 82.26
 ```
 
-##News
+## News
 Container V2 with much better performance will be released soon. Stay tuned. 
 
 ## Training
