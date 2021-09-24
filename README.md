@@ -72,7 +72,8 @@ giving
 * Acc@1 82.26
 ```
 
-
+##News
+Container V2 with much better performance will be released soon. Stay tuned. 
 
 ## Training
 To train Container-Light on ImageNet on a single node with 8 gpus for 300 epochs run:
