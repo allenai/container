@@ -85,6 +85,7 @@ Code will be released seperately.
 
 # News
 Container V2 with much better performance will be released soon. Stay tuned. 
+Imagenet pretrained model for Container V2 : [Container V2](https://github.com/gaopengcuhk/Contianer-V2)
 
 # License
 This repository is released under the Apache 2.0 license as found in the [LICENSE](LICENSE) file.
