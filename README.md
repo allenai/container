@@ -13,7 +13,7 @@ If you use this code for a paper please cite:
 
 # Comparion between CNN, MLP-Mixer and Transformer
 ![Container](conv_mlp_transformer.jpg)
-# Container combine best of both worlds
+# Best of both worlds
 ![Container](container.jpg)
 
 # Model Zoo
