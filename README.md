@@ -11,6 +11,11 @@ If you use this code for a paper please cite:
 }
 ```
 
+# Comparion between CNN, MLP-Mixer and Transformer
+![Container](conv_mlp_transformer.jpg)
+# Container combine best of both worlds
+![Container](container.jpg)
+
 # Model Zoo
 
 We provide baseline Container-light models pretrained on ImageNet 2012.
